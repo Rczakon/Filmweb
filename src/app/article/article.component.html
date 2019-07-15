@@ -1,0 +1,13 @@
+<li class="border-bottom">
+    <div class="row">
+        <div class="col-sm-10 title-desc">
+            <h1> {{article.articleTitle}} </h1>
+            <p>  {{article.description}}
+               <a [routerLink]="['/article', article.id]" (click)="onSelected()">Czytaj dalej</a>
+              </p>
+        </div>
+        <div class="col-sm-2 only-img">
+            <img class="articleImage" src="{{article.imagePath}}">
+        </div>
+      </div>
+</li>

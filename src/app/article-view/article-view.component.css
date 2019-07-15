@@ -1,0 +1,26 @@
+div .article{
+  color: #eeeeee;
+  background-color: #393e46;
+  border: solid;
+  margin-top:100px;
+  padding:20px;
+}
+
+.article-image {
+  /* border:solid; */
+  /* background-color: blue; */
+  height: 100%;
+  float: left;
+  /* margin-left: 10px; */
+}
+
+.article-content {
+  /* border: solid; */
+  /* background-color: red; */
+  float: left;
+}
+
+.header-image {
+  width: 100px;
+  height:200px;
+}

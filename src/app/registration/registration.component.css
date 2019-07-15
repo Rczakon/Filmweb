@@ -1,0 +1,31 @@
+/* Colors: #eeeeee #d65a31 #393e46 #222831 */
+
+.container {
+  border: solid;
+  border-color: #eeeeee;
+  background-color: #393e46;
+  margin-top: 70px;
+  border-width: 1px;
+  width: 50%;
+  color: #eeeeee;
+  /* text-align: center; */
+}
+
+.row {
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  margin: auto;
+}
+
+a {
+  color: #d65a31;
+}
+
+.form-check-input {
+  margin-top: 10px;
+  margin-left: -150px;
+  background-color: red;
+}

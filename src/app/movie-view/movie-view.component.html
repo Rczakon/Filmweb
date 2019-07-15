@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="cover col-sm-3" [ngStyle]="{ 'background-image': 'url(' + selectedMovie.cover + ')'}">
+    </div>
+    <div class="description col-sm-9">
+      <h1> {{selectedMovie.title}} </h1>
+      <p> {{selectedMovie.description}} </p>
+      <ul>
+        <li>Reżyseria: {{selectedMovie.director}}</li>
+        <li>Data premiery: {{selectedMovie.releaseDate}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <app-comment-section></app-comment-section>
+</div>

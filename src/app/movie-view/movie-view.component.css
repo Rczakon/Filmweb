@@ -1,0 +1,22 @@
+.container {
+  background-color: #393e46;
+  margin-top: 70px;
+  color: #eeeeee;
+}
+
+.cover {
+  height: 400px;
+  /* background-size: cover; */
+  border: solid;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.description {
+  text-align: center;
+}
+
+p, ul {
+  text-align: left;
+  list-style: none;
+}

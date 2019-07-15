@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>Zarejestruj się</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="username">Nazwa użytkownika</label>
+            <input
+                type="text"
+                id="username"
+                formControlName="username"
+                class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Adres email</label>
+            <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="passwordOnce">Hasło</label>
+            <input
+                type="text"
+                id="passwordOnce"
+                formControlName="passwordOnce"
+                class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="passwordTwice">Powtórz hasło</label>
+            <input
+                type="text"
+                id="passwordTwice"
+                formControlName="passwordTwice"
+                class="form-control">
+          </div>
+              <div class="form-check">
+                <label class="form-check-label" for="gridCheck">
+                  Akceptuję regulamin
+                </label>
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    formControlName="accepted"
+                    id="gridCheck">
+              </div>
+          <div class="form-group">
+          </div>
+          <button type="submit" class="btn btn-light">Zarejestruj się</button>
+          <br>
+          <small>Masz już konto? <a routerLink="/login">Zaloguj się!</a></small>
+      </form>
+    </div>
+  </div>
+</div>

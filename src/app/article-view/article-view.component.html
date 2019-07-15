@@ -1,0 +1,22 @@
+<!-- <div (click)="showSelected()">
+  {{selectedArticle.articleTitle}}
+</div> -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 article" *ngIf="selectedArticle">
+        <div class="article-content col-sm-9">
+            <h1> {{selectedArticle.articleTitle}} </h1>
+            <h3> {{selectedArticle.description}} </h3>
+        </div>
+        <div class="article-image col-sm-3" [ngStyle]="{ 'background-image': 'url(' + selectedArticle.imagePath + ')'}">
+          <!-- <img class="header-image" src="{{selectedArticle.imagePath}}" alt=""> -->
+        </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+<!-- {{selectedArticle.articleTitle}} -->

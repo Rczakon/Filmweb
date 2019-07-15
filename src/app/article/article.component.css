@@ -1,0 +1,22 @@
+
+li {
+  border-width: 1px;
+  list-style: none;
+  padding: 10px;
+  color: #eeeeee;
+  background-color: #393e46;
+  border: solid;
+  border-width: 1px;
+  list-style: none;
+}
+
+.articleImage {
+  float: right;
+  width: 100px;
+  margin-top: 5px;
+}
+
+a{
+  color: #d65a31 !important;
+}
+

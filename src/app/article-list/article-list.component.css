@@ -1,0 +1,9 @@
+.container {
+  color: white;
+  width: 80%;
+}
+
+.articleImage {
+  float: right;
+  width: 100px;
+}
