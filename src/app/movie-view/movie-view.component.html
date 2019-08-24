@@ -8,11 +8,20 @@
       <ul>
         <li>Reżyseria: {{selectedMovie.director}}</li>
         <li>Data premiery: {{selectedMovie.releaseDate}}</li>
+        <li>Ocena: </li>
       </ul>
+      <i class="fas fa-3x fa-star" id="star1" (click)="addRating(1)"></i>
+      <i class="fas fa-3x fa-star" id="star2" (click)="addRating(2)"></i>
+      <i class="fas fa-3x fa-star" id="star3" (click)="addRating(3)"></i>
+      <i class="fas fa-3x fa-star" id="star4" (click)="addRating(4)"></i>
+      <i class="fas fa-3x fa-star" id="star5" (click)="addRating(5)"></i><br>
+      <span *ngIf="nobodyLogged">Zaloguj się aby ocenić!</span>
+      <span *ngIf="currentUserRating !== undefined && currentUserId !== null">Twoja ocena: {{currentUserRating}}</span>
+      <h2>Średnia ocena: {{averageRating}}</h2>
     </div>
   </div>
 </div>
 
-<div class="container">
-    <app-comment-section></app-comment-section>
+<div class="container-2">
+    <app-comment-section [movieId]="selectedMovieId"></app-comment-section>
 </div>

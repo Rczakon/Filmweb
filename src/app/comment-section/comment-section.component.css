@@ -2,3 +2,20 @@ div {
   margin-top: 50px;
   height: 500px;
 }
+
+li{
+  border: solid;
+  border-width: 1px;
+  border-color: #eeeeee;
+  height: 100px;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+h3{
+  font-size: 20px;
+}
+
+.container {
+  /* border: solid; */
+}

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 list-container">
+      <div class="list-element" *ngFor="let movie of movieList">
+        <div>
+            <button class="btn btn-danger" (click)="deleteMovie(movie.id)" [routerLink]="['/delete-movie']">Usuń</button>
+            <button class="btn btn-success">Edytuj</button>
+          <h2> {{movie.title}} </h2>
+          <!-- <p>Ocena</p> -->
+        </div>
+        <!-- <p>Ocena</p> -->
+    </div>
+  </div>
+</div>

@@ -3,14 +3,21 @@
     <div class="col-sm-12">
 
       <h1>Zarejestruj się</h1>
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <span *ngIf="serverResponse !== undefined">{{serverResponse.message}}</span>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #f="ngForm">
           <div class="form-group">
             <label for="username">Nazwa użytkownika</label>
             <input
                 type="text"
                 id="username"
                 formControlName="username"
-                class="form-control">
+                class="form-control"
+                >
+                <span
+                *ngIf="!registerForm.get('username').valid && registerForm.get('username').touched"
+                class="help-block">
+                Please enter a valid username
+                </span>
           </div>
           <div class="form-group">
             <label for="email">Adres email</label>
@@ -18,23 +25,41 @@
                   type="email"
                   id="email"
                   formControlName="email"
-                  class="form-control">
+                  class="form-control"
+                  >
+                  <span
+                  *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched"
+                  class="help-block">
+                  Please enter a valid email
+                  </span>
           </div>
           <div class="form-group">
             <label for="passwordOnce">Hasło</label>
             <input
-                type="text"
+                type="password"
                 id="passwordOnce"
                 formControlName="passwordOnce"
-                class="form-control">
+                class="form-control"
+                >
+                  <span
+                  *ngIf="!registerForm.get('passwordOnce').valid && registerForm.get('passwordOnce').touched"
+                  class="help-block">
+                  To pole nie może być puste
+                  </span>
           </div>
           <div class="form-group">
             <label for="passwordTwice">Powtórz hasło</label>
             <input
-                type="text"
+                type="password"
                 id="passwordTwice"
                 formControlName="passwordTwice"
-                class="form-control">
+                class="form-control"
+                >
+                <span
+                *ngIf="!registerForm.get('passwordTwice').valid && registerForm.get('passwordTwice').touched"
+                class="help-block">
+                To pole nie może być puste
+                </span>
           </div>
               <div class="form-check">
                 <label class="form-check-label" for="gridCheck">
@@ -44,12 +69,19 @@
                     class="form-check-input"
                     type="checkbox"
                     formControlName="accepted"
-                    id="gridCheck">
+                    id="gridCheck"
+                    >
+                    <span
+                    *ngIf="!registerForm.get('accepted').valid && registerForm.get('accepted').touched"
+                    class="help-block">
+                    Proszę zaakceptować regulamin
+                    </span>
               </div>
           <div class="form-group">
           </div>
-          <button type="submit" class="btn btn-light">Zarejestruj się</button>
+          <button type="submit" class="btn btn-light" [disabled]="!registerForm.valid">Zarejestruj się</button>
           <br>
+
           <small>Masz już konto? <a routerLink="/login">Zaloguj się!</a></small>
       </form>
     </div>

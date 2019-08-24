@@ -43,3 +43,7 @@ ul li:hover ul li {
 .container {
   border-radius: 10px;
 }
+
+.session-header {
+  color: white;
+}

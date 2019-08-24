@@ -1,0 +1,27 @@
+<button class="btn btn-primary" (click)="getUserList()">Pobierz liste</button>
+<div *ngIf="serverResponse !== undefined">
+  <ul>
+    <div  class="list-element-container" *ngFor="let movie of movies">
+      <img class="mini-cover" src="{{movie.movieCover}}">
+      <h2>{{movie.movieTitle}}</h2>
+      <h2>Ocena: {{movie.rating}}</h2>
+    </div>
+  </ul>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-8 list-container">
+        <div class="list-element" *ngFor="let movie of movieList" [routerLink]="['/movie', movie.id]">
+          <div class="movie-info col-10">
+            <h2> {{movie.title}} </h2>
+            <p> {{movie.description}} </p> -->
+            <!-- <p>Ocena</p> -->
+          <!-- </div>
+          <img class="mini-cover col-2" src="{{movie.cover}}"> -->
+          <!-- <p>Ocena</p> -->
+      <!-- </div>
+    </div>
+    <app-sider class="col-sm-4"></app-sider>
+  </div>
+   -->

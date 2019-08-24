@@ -18,20 +18,6 @@ export class ArticleViewComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.articleService.articleSelected2
-    // .subscribe(
-    //   (article: Article) => {
-    //     console.log('');
-    //     this.selectedArticle = article;
-    //   }
-    // );
-    // this.route.params
-    //   .subscribe(
-    //     (params: Params) => {
-    //       this.selectedArticleId = +params['id'];
-    //       this.selectedArticle = this.articleService.getArticle(this.selectedArticleId);
-    //     }
-    //   )
 
     console.log(this.route.snapshot.params.id);
 

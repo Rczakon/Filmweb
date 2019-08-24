@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" *ngIf="!currentSession.loggedIn">
 
       <h1>Zaloguj się</h1>
+      <span *ngIf="currentSession.serverMessage !== null">{{this.loggingService.serverResponse.message}}</span>
       <!-- ZAKOŃCZONE NA: 204. REACTIVE: ADDING VALIDATION -->
       <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
@@ -17,7 +18,7 @@
             <label for="password">Hasło</label>
             <input
               id="password"
-              type="text"
+              type="password"
               formControlName="password"
               class="form-control">
           </div>
@@ -26,5 +27,10 @@
           <small>Nie masz konta? <a routerLink="/register">Zarejestruj się!</a></small>
       </form>
     </div>
+  </div>
+  <button (click)="this.loggingService.addCookie()">Klik</button>
+
+  <div class="col-sm-12" *ngIf="currentSession.loggedIn">
+    <h1>Witaj {{currentSession.userName}} </h1>
   </div>
 </div>

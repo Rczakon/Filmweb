@@ -1,3 +1,25 @@
+<div class="container">
 <div>
-  <h1>Komentarze</h1>
+    <h1>Komentarze</h1>
+  <div>
+      <ul>
+        <li *ngFor="let comment of comments">
+          <h2>{{comment.userName}}</h2>
+          <h3>{{comment.content}}</h3>
+        </li>
+      </ul>
+      <div *ngIf="sessionOn">
+          <h1>Dodaj komentarz</h1>
+          <form action="" [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <span>{{currentUserName}}</span><br>
+              <textarea name="" id="" cols="30" rows="10" formControlName="content"></textarea><br>
+              <button type="submit">Dodaj komentarz</button>
+            </div>
+          </form>
+        </div>
+    <span *ngIf="!sessionOn">Zaloguj się aby komentować</span>
+    </div>
 </div>
+
+

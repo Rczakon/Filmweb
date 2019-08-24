@@ -1,0 +1,14 @@
+.list-element-container {
+  border-color: #eeeeee;
+  border-width: 1px;
+  border: solid;
+  height: 100px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.mini-cover {
+  float: right;
+  height: 100%;
+}

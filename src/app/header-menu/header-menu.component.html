@@ -1,3 +1,4 @@
+<h3 class="session-header" *ngIf="this.loggingService.session.loggedIn">Zalogowany jako {{ this.loggingService.session.userName }}</h3>
 <div class="container">
     <ul class="row">
         <li class="col-sm-2"><a routerLink="/">Strona główna</a></li>
@@ -9,17 +10,13 @@
             <li><a>Nadchodzące</a></li>
           </ul>
         </li>
-        <li class="col-sm-2">
-          <a>Aktorzy</a>
-          <ul>
-              <li><a>Najlepsi</a></li>
-              <li><a>Najpaskudniejsi</a></li>
-              <li><a>Nieżyjący</a></li>
-            </ul>
+        <li class="col-sm-2" *ngIf="!this.loggingService.session.loggedIn"><a routerLink="/login">Zaloguj się</a></li>
+        <li class="col-sm-2" *ngIf="this.loggingService.session.loggedIn" (click)="logOut()"><a>Wyloguj się</a></li>
+        <li class="col-sm-2" *ngIf="this.loggingService.session.loggedIn"><a (click)="showMessage()" [routerLink]="['/user-panel', this.loggingService.session.userId]">Mój profil</a></li>
+        <li class="col-sm-6" *ngIf="!this.loggingService.session.loggedIn">
+          <app-search-tool></app-search-tool>
         </li>
-        <li class="col-sm-2" *ngIf="isLogged === false"><a routerLink="/login">Zaloguj się</a></li>
-        <li class="col-sm-2" *ngIf="isLogged === true"><a>Wyloguj się</a></li>
-        <li class="col-sm-4">
+        <li class="col-sm-4" *ngIf="this.loggingService.session.loggedIn">
           <app-search-tool></app-search-tool>
         </li>
       </ul>

@@ -2,8 +2,18 @@
   background-color: #393e46;
   margin-top: 70px;
   color: #eeeeee;
+  border: solid;
 }
 
+.container-2 {
+  background-color: #393e46;
+  margin-top: 70px;
+  height: 1000px;
+  width: 80%;
+  color: #eeeeee;
+  margin: auto;
+  margin-top:20px;
+}
 .cover {
   height: 400px;
   /* background-size: cover; */
@@ -19,4 +29,13 @@
 p, ul {
   text-align: left;
   list-style: none;
+}
+
+/* i {
+  size: 9x;
+} */
+
+
+.far:hover {
+  color:yellow;
 }

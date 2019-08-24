@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="profile-header"><h2> {{currentUser}}</h2></div>
+  <div class="row">
+    <div class="col-sm-2 avatar-section">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg">
+      <div><button class="btn btn-primary">Zmień avatar</button></div>
+    </div>
+    <div class="col-sm-6 basic-info">
+      <form action="" [formGroup]="userInfoForm" (ngSubmit)="onSubmit()">
+      <div>Imię: {{userData.name}}<input *ngIf="isEditing" type="text" formControlName="firstName"></div>
+      <div>Nazwisko: {{userData.surname}}<input *ngIf="isEditing" type="text" formControlName="lastName"></div>
+      <div>Data urodzenia: {{userData.date | date:'shortDate'}}<input *ngIf="isEditing" type="date" formControlName="date"></div>
+      <div>Adres email: {{userData.email}}<input *ngIf="isEditing" type="text" formControlName="email"></div>
+      <div><button *ngIf="!isEditing" class="btn btn-primary" (click)="startEditing()">Edytuj</button></div>
+      <div><button *ngIf="isEditing" class="btn btn-primary" type="submit">Save</button></div>
+      <div><button *ngIf="isEditing" class="btn btn-primary" (click)="stopEditing()">Cancel</button></div>
+      </form>
+
+
+    </div>
+  </div>
+  <h1>Moje oceny</h1>
+  <app-user-movies-list></app-user-movies-list>
+</div>

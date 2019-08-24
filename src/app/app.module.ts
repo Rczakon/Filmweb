@@ -19,6 +19,14 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoggingComponent } from './logging/logging.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ArticleAdderComponent } from './article-adder/article-adder.component';
+import { MovieAdderComponent } from './movie-adder/movie-adder.component';
+import { PersonAdderComponent } from './person-adder/person-adder.component';
+import { MovieDeleterComponent } from './movie-deleter/movie-deleter.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
+import { CookieService } from 'ngx-cookie-service';
+import { UserMoviesListComponent } from './user-movies-list/user-movies-list.component';
+
 
 
 @NgModule({
@@ -37,6 +45,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FooterComponent,
     RegistrationComponent,
     LoggingComponent,
+    ArticleAdderComponent,
+    MovieAdderComponent,
+    PersonAdderComponent,
+    MovieDeleterComponent,
+    UserPanelComponent,
+    UserMoviesListComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +59,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

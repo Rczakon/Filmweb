@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>Dodaj film</h1>
+      <form [formGroup]="movieAddForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+             id="title"
+             type="text"
+             formControlName="title"
+             class="form-control"
+             placeholder="Tytuł">
+          </div>
+          <div class="form-group">
+            <textarea
+            class="form-control"
+            formControlName="description"
+            rows="3"
+            placeholder="Treść">
+          </textarea>
+          </div>
+          <!-- DODAWANIE PLIKU Z OKŁADKĄ TYMCZASOWO ZASTĄPIONE ŚCIĘŻKĄ -->
+          <!-- <div class="form-group">
+            <input
+            type="file"
+            class="form-control-file"
+            id="exampleFormControlFile1"
+            formControlName="articleCover">
+          </div> -->
+          <div class="form-group">
+            <input
+             id="genre"
+             type="text"
+             formControlName="genre"
+             class="form-control"
+             placeholder="Gatunek">
+          </div>
+          <div class="form-group">
+            <input
+             id="director"
+             type="text"
+             formControlName="director"
+             class="form-control"
+             placeholder="Reżyser">
+          </div>
+          <div class="form-group">
+            <input
+             id="releaseDate"
+             type="text"
+             formControlName="releaseDate"
+             class="form-control"
+             placeholder="Data premiery">
+          </div>
+          <div class="form-group">
+            <input
+             id="cast"
+             type="text"
+             formControlName="cast"
+             class="form-control"
+             placeholder="Obsada">
+          </div>
+          <div class="form-group">
+            <input
+             id="cover"
+             type="text"
+             formControlName="cover"
+             class="form-control"
+             placeholder="Okładka">
+          </div>
+          <button type="submit" class="btn btn-light">Dodaj film</button>
+          <br>
+      </form>
+    </div>
+  </div>
+</div>

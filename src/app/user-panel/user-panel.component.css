@@ -1,0 +1,44 @@
+.container {
+  background-color: #393e46;
+  margin-top: 70px;
+  /* height: 600px; */
+  color: #eeeeee;
+  padding-top: 20px;
+}
+
+.description {
+  text-align: center;
+}
+
+.avatar {
+  /* margin: 10px;
+  margin-top: 0px; */
+  margin: auto;
+  height: 100px;
+  padding: 0px;
+}
+
+
+.basic-info {
+  /* border: solid; */
+}
+
+.basic-info div{
+  margin-top: 5px;
+}
+
+input {
+  background-color: #eeeeee;
+  border-width: 1px;
+  /* border-color: #eeeeee;
+  color: #eeeeee; */
+  border: none;
+}
+
+.row {
+  margin-bottom: 50px;
+}
+
+li {
+  list-style: none;
+}

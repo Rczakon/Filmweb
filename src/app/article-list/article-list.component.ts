@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../article.service';
 import { Article } from '../article.model';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-article-list',
@@ -11,8 +12,10 @@ import { Article } from '../article.model';
 export class ArticleListComponent implements OnInit {
 
   articleArray: Article[];
+  loggedIn = false;
+  currentUser = '';
 
-  constructor(private articleService: ArticleService) {
+  constructor(private articleService: ArticleService, private loggingService: LoggingService) {
 
   }
 
@@ -25,6 +28,12 @@ export class ArticleListComponent implements OnInit {
         this.articleArray = articles;
         console.log(articles);
       });
+    this.loggingService.sendSessionInfo
+      .subscribe((session: any) => {
+        this.loggedIn = session.loggedIn;
+        this.currentUser = session.userName;
+      });
+
   }
 
 }

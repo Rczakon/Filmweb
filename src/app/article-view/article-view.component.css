@@ -24,3 +24,9 @@ div .article{
   width: 100px;
   height:200px;
 }
+
+.comments-container {
+    background-color: #393e46;
+    margin-top: 70px;
+    color: #eeeeee;
+}
