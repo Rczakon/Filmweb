@@ -10,7 +10,7 @@ import { LoggingService } from '../logging.service';
 })
 export class LoggingComponent implements OnInit {
 
-  constructor(private http: HttpClient, private loggingService: LoggingService) { }
+  constructor(private http: HttpClient, public loggingService: LoggingService) { }
 
   signupForm: FormGroup;
   serverResponse: any;

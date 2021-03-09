@@ -12,7 +12,7 @@ export class HeaderMenuComponent implements OnInit {
   currentUser = '';
   currentUserId;
 
-  constructor(private loggingService: LoggingService) { }
+  constructor(public loggingService: LoggingService) { }
 
   ngOnInit() {
     // console.log(this.isLogged);

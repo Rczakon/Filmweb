@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MovieDeleterComponent } from './movie-deleter.component';
 
@@ -6,7 +6,7 @@ describe('MovieDeleterComponent', () => {
   let component: MovieDeleterComponent;
   let fixture: ComponentFixture<MovieDeleterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MovieDeleterComponent ]
     })

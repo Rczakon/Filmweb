@@ -10,7 +10,7 @@
             <li><a>Nadchodzące</a></li>
           </ul>
         </li>
-        <li class="col-sm-2" *ngIf="!this.loggingService.session.loggedIn"><a routerLink="/login">Zaloguj się</a></li>
+        <li class="col-sm-2" *ngIf="!this.loggingService.session.loggedIn"><a routerLink="/login">Zaaaaaloguj się</a></li>
         <li class="col-sm-2" *ngIf="this.loggingService.session.loggedIn" (click)="logOut()"><a>Wyloguj się</a></li>
         <li class="col-sm-2" *ngIf="this.loggingService.session.loggedIn"><a (click)="showMessage()" [routerLink]="['/user-panel', this.loggingService.session.userId]">Mój profil</a></li>
         <li class="col-sm-6" *ngIf="!this.loggingService.session.loggedIn">
