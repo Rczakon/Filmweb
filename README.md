@@ -1,6 +1,6 @@
 # MyFilmweb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8. It's a simple SPA app which allows registered users to rate and comment movies included in the database. 
 
 ## Development server
 
